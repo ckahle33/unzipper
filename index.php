@@ -36,8 +36,8 @@ if (isset($_REQUEST['unzip'])) {
     </style>
 		<div class="container">
 			<div class="col-sm-6 col-sm-offset-3">
-				<h2>unzipper...</h2>
-				<p>place files you want to unzip in the zipper directory</p>
+				<h2>unzipper.</h2>
+				<p>place files you want to unzip in the unzipper directory. Large files may take a while.</p>
 			<form action=""  method="POST">
 				<button type="submit" name="unzip" value="unzip" class="btn btn-default">Unzip!!!</button>
 			</form>		
