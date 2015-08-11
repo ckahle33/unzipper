@@ -1,6 +1,5 @@
 <?php 
 
-// $unzip = $_POST['unzip'];
 $zip = new ZipArchive;
 $files = scandir(getcwd());
 $key = array_search('.zip', $files);
