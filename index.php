@@ -28,7 +28,12 @@ if (isset($_REQUEST['unzip'])) {
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
-
+    <style type="text/css">
+      html {
+        tab-size: 2;
+        -moz-tab-size: 2;
+      } 
+    </style>
 		<div class="container">
 			<div class="col-sm-6 col-sm-offset-3">
 				<h2>unzipper...</h2>
