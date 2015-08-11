@@ -36,10 +36,12 @@ if (isset($_REQUEST['unzip'])) {
     </style>
 		<div class="container">
 			<div class="col-sm-6 col-sm-offset-3">
-				<h2>unzipper.</h2>
-				<p>place files you want to unzip in the unzipper directory. Large files may take a while.</p>
+	       			
+      <img src="logo.png" style="margin-top: -10px; margin-left: -5px;"></img>
+        <h2>unzipper</h2>
+				<p>place files you want to unzip in the unzipper directory. large files may take a while.</p>
 			<form action=""  method="POST">
-				<button type="submit" name="unzip" value="unzip" class="btn btn-default">Unzip!!!</button>
+				<button type="submit" name="unzip" value="unzip" class="btn btn-default">cue the bass</button>
 			</form>		
 			<ul style="margin-left: 0; padding-left: 0; list-style-type: none;">	
 				<?php 
