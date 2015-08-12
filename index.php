@@ -4,7 +4,15 @@ $zip = new ZipArchive;
 $files = scandir(getcwd());
 $key = array_search('.zip', $files);
 
-if (isset($_REQUEST['unzip'])) {
+if (isset($_POST['unzip_path'])) {
+
+  echo $_POST['unzip_path'];
+
+  if (!empty($_POST["unzip_path"])) {
+    $unzip_path = $_POST["unzip_path"];
+  } else {
+    $unzip_path = getcwd();
+  }
 	
 	$messages = [];
 	
@@ -12,7 +20,7 @@ if (isset($_REQUEST['unzip'])) {
 		if (pathinfo($file, PATHINFO_EXTENSION) == 'zip') {
 			$res = $zip->open($file);
 			if ($res === TRUE) {
-				$zip->extractTo(getcwd());
+				$zip->extractTo($unzip_path);
 				$zip->close();
 				array_push($messages, $file);
 			} 
@@ -41,6 +49,11 @@ if (isset($_REQUEST['unzip'])) {
         <h2>unzipper</h2>
 				<p>place files you want to unzip in the unzipper directory. large files may take a while.</p>
 			<form action=""  method="POST">
+          <div class="form-group">
+            <label for="unzip_path ">unzip path</label>
+            <input type="text" class="form-control" id="unzip_path" name="unzip_path" placeholder="unzips in the cwd if empty">
+          </div>
+
 				<button type="submit" name="unzip" value="unzip" class="btn btn-default">cue the bass</button>
 			</form>		
 			<ul style="margin-left: 0; padding-left: 0; list-style-type: none;">	
