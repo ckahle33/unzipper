@@ -5,9 +5,7 @@ $files = scandir(getcwd());
 $key = array_search('.zip', $files);
 
 if (isset($_POST['unzip_path'])) {
-
-  echo $_POST['unzip_path'];
-
+  
   if (!empty($_POST["unzip_path"])) {
     $unzip_path = $_POST["unzip_path"];
   } else {
